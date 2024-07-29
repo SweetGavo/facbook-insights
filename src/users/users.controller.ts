@@ -45,7 +45,6 @@ export class UsersController {
     try {
       return await this.usersService.updateUser(facebookId, updateUserDto);
     } catch (error) {
-      // Handle the error or rethrow it
       throw new BadRequestException(error.message);
     }
   }
@@ -55,7 +54,6 @@ export class UsersController {
     try {
       return await this.usersService.deleteUser(facebookId);
     } catch (error) {
-      // Handle the error or rethrow it
       throw new BadRequestException(error.message);
     }
   }
